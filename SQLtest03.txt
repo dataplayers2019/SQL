@@ -1,0 +1,25 @@
+-- *** hr/hr 계정에서 test
+--16. 직원의 이름(first_name),과 직책(job_title)을 출력(검색)
+--	단, 사용되지 않는 직책이 있다면 그 직책이 정보도 검색에 포함
+--     검색 정보 이름(2개)들과 job_title(직책) 
+
+	-- 문제 풀이를 위한 table의 컬럼값들 확인해 보기
+       -> first_name, job_title, job_id
+
+select first_name, job_title
+from employees e, jobs j
+where e.job_id = j.job_id(+); 	   
+
+
+
+--17. 직원들의 이름(first_name), 입사일, 부서명(department_name) 검색하기
+
+
+-- 단, 부서가 없는 직원이 있다면 그 직원 정보도 검색에 포함시키기
+
+    -- 문제 풀이를 위한 table의 컬럼값들 확인해 보기
+       -> first_name, hire_dat, department_name, department_id
+	   
+select first_name, hire_date, department_name 
+from employees e, departments d
+where e.department_id = d.department_id(+);
